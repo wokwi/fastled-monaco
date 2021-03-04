@@ -4,11 +4,13 @@
  * Copyright (C) 2021, Elliott Kember & Uri Shaked
  */
 
-import { colorConstants, constants, methods } from './fastled-keywords';
+import type { languages } from 'monaco-editor';
 import { cssColorValue } from './fastled-colors';
+import { colorConstants, constants, methods } from './fastled-keywords';
+import { MonacoGlobal } from './types';
 
 /* eslint-disable no-template-curly-in-string */
-export function fastledSnippets(monaco: MonacoGlobal): CompletionItem[] {
+export function fastledSnippets(monaco: MonacoGlobal): languages.CompletionItem[] {
   // Some of these come from https://github.com/FastLED/FastLED/blob/d5ddf40d3f3731adb36c122abba29cbf80654be3/src/colorutils.h
   const insertTextRules = monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet;
   const kind = monaco.languages.CompletionItemKind.Function;

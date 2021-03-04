@@ -5,10 +5,15 @@
  */
 
 import { fastLEDMethods } from './fastled-keywords';
+import type { languages } from 'monaco-editor';
+import { MonacoGlobal } from './types';
 
 export const nonVoidFastLEDMethods = ['getFPS', 'getBrightness'];
 
-export function fastledAutocomplete(monaco: MonacoGlobal, value: string): CompletionItem[] | null {
+export function fastledAutocomplete(
+  monaco: MonacoGlobal,
+  value: string
+): languages.CompletionItem[] | null {
   if (/\W(FastLED|LEDS)\s*\.\s*$/.test(value)) {
     return [
       ...fastLEDMethods.map((method) => ({

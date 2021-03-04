@@ -7,7 +7,7 @@
     "rootDir": "..",
     "lib": ["dom"],
     "paths": {
-      "avr8js": ["src"]
+      "fastled-monaco": ["src"]
     }
   },
   "include": ["fuse.ts", "src/**/*.ts"]

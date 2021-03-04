@@ -4,6 +4,8 @@
  * Copyright (C) 2021, Elliott Kember & Uri Shaked
  */
 
+import type { IRange, Position, languages, editor } from 'monaco-editor';
+
 export const fastledColors: { [key: string]: number | undefined } = {
   AliceBlue: 0xf0f8ff,
   Amethyst: 0x9966cc,
@@ -207,7 +209,7 @@ function prevCharacter(pos: Position): IRange {
   };
 }
 
-export function provideColorPresentations(colorInfo: IColorInformation) {
+export function provideColorPresentations(colorInfo: languages.IColorInformation) {
   const red = Math.round(colorInfo.color.red * 255);
   const green = Math.round(colorInfo.color.green * 255);
   const blue = Math.round(colorInfo.color.blue * 255);
@@ -226,7 +228,7 @@ export function provideColorPresentations(colorInfo: IColorInformation) {
   ];
 }
 
-export function provideDocumentColors(model: ITextModel) {
+export function provideDocumentColors(model: editor.ITextModel) {
   const crgbCallRegex = /CRGB\s*\(\s*(0x\d+|\d+)\s*,\s*(0x\d+|\d+)\s*,\s*(0x\d+|\d+)\s*\)/;
   const regexp = new RegExp(CRGBRegexp + '|' + crgbCallRegex.source, 'g');
   const matches = model.findMatches(regexp.source, true, true, false, null, true);

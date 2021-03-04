@@ -11,7 +11,7 @@
     "noEmitOnError": true,
     "rootDir": "src",
     "outDir": "dist/esm",
-    "lib": ["es2015"]
+    "lib": ["es2015", "dom"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts"]

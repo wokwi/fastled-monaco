@@ -2,8 +2,15 @@
   "name": "@wokwi/fastled-monaco",
   "version": "1.0.0",
   "description": "FastLED Autocomplete + Goodie for Monaco Editor",
-  "main": "prettier.config.js",
+  "main": "dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "rimraf dist && tsc --sourceMap false && tsc -m commonjs --outDir dist/cjs --sourceMap false",
+    "prepare": "npm run build",
     "start": "parcel demo/src/index.html"
   },
   "repository": {
@@ -23,7 +30,25 @@
     "url": "https://github.com/wokwi/fastled-monaco/issues"
   },
   "homepage": "https://github.com/wokwi/fastled-monaco#readme",
+  "peerDependencies": {
+    "monaco-editor": "*"
+  },
   "devDependencies": {
-    "parcel": "^2.0.0-nightly.614"
+    "@parcel/optimizer-cssnano": "^2.0.0-nightly.616",
+    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.616",
+    "@parcel/packager-css": "^2.0.0-nightly.616",
+    "@parcel/packager-html": "^2.0.0-nightly.616",
+    "@parcel/transformer-css": "^2.0.0-nightly.616",
+    "@parcel/transformer-html": "^2.0.0-nightly.616",
+    "@parcel/transformer-postcss": "^2.0.0-nightly.616",
+    "@parcel/transformer-posthtml": "^2.0.0-nightly.616",
+    "monaco-editor": "^0.22.3",
+    "parcel": "^2.0.0-nightly.614",
+    "postcss": "^8.2.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.2"
+  },
+  "alias": {
+    "fastled-monaco": "./src"
   }
 }
