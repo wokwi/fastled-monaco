@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rimraf dist && tsc --sourceMap false && tsc -m commonjs --outDir dist/cjs --sourceMap false",
     "prepare": "npm run build",
-    "start": "npm --prefix demo install && npm --prefix demo start"
+    "start": "cd demo && npm install && npm start"
   },
   "repository": {
     "type": "git",
