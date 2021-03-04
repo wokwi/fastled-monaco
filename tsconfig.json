@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ES2016",
     "module": "ES2015",
     "moduleResolution": "node",
     "noImplicitAny": true,
@@ -11,7 +11,7 @@
     "noEmitOnError": true,
     "rootDir": "src",
     "outDir": "dist/esm",
-    "lib": ["es2015", "dom"]
+    "lib": ["es2016", "dom"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts"]

@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rimraf dist && tsc --sourceMap false && tsc -m commonjs --outDir dist/cjs --sourceMap false",
     "prepare": "npm run build",
-    "start": "parcel demo/src/index.html"
+    "start": "npm --prefix demo install && npm --prefix demo start"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "Uri Shaked",
     "Elliott Kember"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/wokwi/fastled-monaco/issues"
   },
@@ -34,17 +34,7 @@
     "monaco-editor": "*"
   },
   "devDependencies": {
-    "@parcel/optimizer-cssnano": "^2.0.0-nightly.616",
-    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.616",
-    "@parcel/packager-css": "^2.0.0-nightly.616",
-    "@parcel/packager-html": "^2.0.0-nightly.616",
-    "@parcel/transformer-css": "^2.0.0-nightly.616",
-    "@parcel/transformer-html": "^2.0.0-nightly.616",
-    "@parcel/transformer-postcss": "^2.0.0-nightly.616",
-    "@parcel/transformer-posthtml": "^2.0.0-nightly.616",
     "monaco-editor": "^0.22.3",
-    "parcel": "^2.0.0-nightly.614",
-    "postcss": "^8.2.7",
     "rimraf": "^3.0.2",
     "typescript": "^4.2.2"
   },
