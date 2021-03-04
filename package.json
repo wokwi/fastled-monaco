@@ -1,0 +1,29 @@
+{
+  "name": "@wokwi/fastled-monaco",
+  "version": "1.0.0",
+  "description": "FastLED Autocomplete + Goodie for Monaco Editor",
+  "main": "prettier.config.js",
+  "scripts": {
+    "start": "parcel demo/src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wokwi/fastled-monaco"
+  },
+  "keywords": [
+    "FastLED",
+    "Monaco Editor"
+  ],
+  "authors": [
+    "Uri Shaked",
+    "Elliott Kember"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wokwi/fastled-monaco/issues"
+  },
+  "homepage": "https://github.com/wokwi/fastled-monaco#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.614"
+  }
+}
