@@ -4,7 +4,7 @@
  * Copyright (C) 2021 Uri Shaked
  */
 
-import { MonacoGlobal, registerFastLEDContributions } from 'fastled-monaco';
+import { MonacoGlobal, registerFastLEDContributions } from '@wokwi/fastled-monaco';
 
 const BLINK_CODE = `
 #include <FastLED.h>
